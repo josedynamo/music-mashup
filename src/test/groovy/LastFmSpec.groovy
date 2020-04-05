@@ -10,6 +10,7 @@ import spock.lang.Specification
 
 class LastFmSpec extends Specification {
 
+    @Shared
     def mainClassApplicationUnderTest = new MainClassApplicationUnderTest(MusicMashUpServer.class)
 
     @Shared

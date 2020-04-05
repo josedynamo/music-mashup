@@ -4,10 +4,11 @@ This app mashes several free music apis to aggregate useful data about the artis
 
 ## Run Tests
 
-To run the tests, open a terminal and type the command :  _gradle test_
+Since the Gradle Wrapper is included, to run the tests open a terminal and type the command :  _./gradlew test_
 
 ## Run
-To run the app just open the terminal and type the command : _gradle run_ 
+
+To run the app open a terminal and type the command : _./gradlew run_ 
 
 Click on the link where the app is running that is shown in the console.  
 
