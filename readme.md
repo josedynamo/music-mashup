@@ -45,7 +45,7 @@ Click on the link where the app is running that is shown in the console.
 I know... I'm using their Prod environments for the tests. 
 
 ## Stack
-[Ratpack](https://ratpack.io/manual/current/intro.html#goals)
-[Spock](http://spockframework.org/spock/docs/1.3/spock_primer.html)
-[Gradle](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:projects_and_tasks)
-[Handlebars](https://handlebarsjs.com/guide/)
+- [Ratpack](https://ratpack.io/manual/current/intro.html#goals)
+- [Spock](http://spockframework.org/spock/docs/1.3/spock_primer.html)
+- [Gradle](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html#sec:projects_and_tasks)
+- [Handlebars](https://handlebarsjs.com/guide/)
