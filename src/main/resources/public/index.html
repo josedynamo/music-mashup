@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music MashUp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container" style="padding: 1.5rem">
+    <h1>Music Mashup</h1>
+    <div style="padding: 1.5rem" class="border border-primary rounded">
+        <div>
+            <label for="user">Get Top Artists for user:</label>
+            <input name="user" id="user" type="text" placeholder="Try 'josebcn' for example">
+        </div>
+        <div>
+            <label for="period">In the:</label>
+            <select id="period" name="period">
+                overall | 7day | 1month | 3month | 6month | 12month
+                <option value="7day">Last week</option>
+                <option value="1month">Last Month</option>
+                <option value="3month">Last 3 Months</option>
+                <option value="6month">Last 6 Months</option>
+                <option value="12month">Last year</option>
+                <option value="overall" selected="selected">Overall</option>
+            </select>
+        </div>
+        <div>
+            <input class="btn btn-primary" id="go" type="button" value="GO!"/>
+        </div>
+    </div>
+
+</div>
+<div style="padding: 1.5rem; display : none" class="container" id="top-artists">
+    <h2>Top Artists</h2>
+    <script id="top-artists-template" type="text/x-handlebars-template">
+        {{#each artist}}
+        <li>{{name}}, {{mbid}} </li>
+        {{/each}}
+    </script>
+    <div id="error-message">
+
+    </div>
+    <ul id="top-artists-list-container">
+    </ul>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="/js/app.js"></script>
+</html>

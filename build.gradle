@@ -1,0 +1,61 @@
+version = '0.1-SNAPSHOT'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.ratpack:ratpack-gradle:1.7.6"
+    }
+}
+
+apply plugin: "io.ratpack.ratpack-java"
+apply plugin: "idea"
+apply plugin: 'groovy'
+
+repositories {
+    jcenter()
+}
+
+ext {
+    spockVersion = '1.2-groovy-2.5'
+    jupiterVersion = '5.3.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compileOnly "org.codehaus.groovy:groovy-all:3.0.1"
+    implementation ratpack.dependency("guice")
+    implementation 'com.google.code.gson:gson:2.8.6'
+    runtimeOnly "org.slf4j:slf4j-simple:1.7.25"
+    testImplementation "org.spockframework:spock-core:$spockVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:$jupiterVersion"
+    implementation "org.apache.commons:commons-lang3:3.0"
+    implementation "io.ratpack:ratpack-gradle:1.7.6"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+//Gets the version from the property defined at the top of this file and prints it.
+// Actions are executed in order although they're not defined like that.
+// try `gradle -q printVersion`
+
+task printVersion {
+    group = 'versioning'
+    description = 'Prints project version.'
+    doLast {
+        println "The Version of this app is: $version"
+    }
+    doFirst{
+        println "Reading the project's version..."
+    }
+}
+
+mainClassName = "org.rvrmdz.dynamo.MusicMashUpServer"

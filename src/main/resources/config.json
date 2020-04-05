@@ -1,0 +1,14 @@
+{
+  "app": {
+    "lastFM": {
+      "apiKey": "9784f1bf71bab086be996aa862fddeaf",
+      "secret": "f244cf6620b0df19d2b6e1ca25f10f1b",
+      "apiBaseUrl": "https://ws.audioscrobbler.com/2.0/?method=%s&user=%s&period=%s&api_key=%s&format=json",
+      "topArtistsMethod": "user.gettopartists"
+    },
+    "songkick": {
+      "apiKey": "",
+      "apiBaseUrl": "https://api.songkick.com/api/3.0/%s?apikey=%s"
+    }
+  }
+}
