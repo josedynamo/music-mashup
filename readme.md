@@ -14,14 +14,16 @@ Click on the link where the app is running that is shown in the console.
 
 ## High Level Specs 
 
-1. Get list of top Artists from a specific Last FM user via the Last.FM [API](https://www.last.fm/api/show/user.getTopArtists). ✔
-2. Get the list of next shows for those artists from Songkick (The [Music Brainz](https://musicbrainz.org/) ID (mbid) gotten from last.fm can be used for that.)
+1. Get list of top Artists from a specific (Last.FM)[www.last.fm] user via the Last.FM [API](https://www.last.fm/api/show/user.getTopArtists). ✔
+2. Get the list of next shows for those artists from Songkick (The [Music Brainz](https://musicbrainz.org/) ID (**mbid**) gotten from last.fm can be used for that.)
    For more details go [here](https://www.songkick.com/developer/upcoming-events-for-artist). 
-3. Create a spotify playlist with random songs from those artists.
+3. Create a Spotify playlist with random songs from those artists.
 4. Create a simple UI that shows:
- - The topArtists of a LastFM user.
+ - The top artists of a LastFM user.
  - The upcoming events for each artist when it's name is clicked.
 5. Persist the data to avoid doing repeating the same calls.
+
+And more... 
 
 ## 12 Factor Application Compliance Check 
 
